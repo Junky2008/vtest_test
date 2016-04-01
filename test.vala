@@ -18,7 +18,16 @@ void add_foo_tests() {
 }
 
 void main (string[] args) {
+    Gtk.init (ref args);
     Test.init (ref args);
-    add_foo_tests ();
-    Test.run ();
+    
+    add_foo_tests();
+    
+    Idle.add(() => {
+        Test.run();
+        Gtk.main_quit();
+        return false;
+    });
+    
+    Gtk.main();
 }
