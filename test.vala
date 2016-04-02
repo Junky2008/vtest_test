@@ -12,9 +12,34 @@ void lowercase_test()
     assert(high == "test");
 }
 
+void gtkWindow_test()
+{
+    var window = new Gtk.Window();
+    assert(window is Gtk.Window);
+}
+
+void gtkButtonClick_test()
+{
+    var window = new Gtk.Window();
+    var button = new Gtk.Button.with_label("Click me");
+    window.add(button);
+    
+    button.clicked.connect(() => {
+        button.label = "Clicked";
+    });
+    
+    window.show_all();
+    
+    button.clicked();
+    
+    assert(button.label == "Clicked");
+}
+
 void add_foo_tests() {
     Test.add_func("/uppercase", uppercase_test);
     Test.add_func("/lowercase", lowercase_test);
+    Test.add_func("/gtkWindow", gtkWindow_test);
+    Test.add_func("/gtkButtonClick", gtkButtonClick_test);
 }
 
 void main (string[] args) {

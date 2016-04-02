@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<testsuites>
+	<testsuite name="testName" tests="4" failures="0" timestamp="0">
+		<testcase name="/uppercase" classname="/uppercase_test"/>
+		<testcase name="/lowercase" classname="/lowercase_test"/>
+		<testcase name="/gtkWindow" classname="/gtkWindow_test"/>
+		<testcase name="/gtkButtonClick" classname="/gtkButtonClick_test"/>
+	</testsuite>
+</testsuites>
