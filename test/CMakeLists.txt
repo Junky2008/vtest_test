@@ -1,5 +1,5 @@
 # project name
-project (test)
+project (vala_test)
 
 # the oldest stable cmake version we support
 cmake_minimum_required (VERSION 2.6)
