@@ -11,7 +11,7 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/share")
 
 # what to call that directory where we install data too
-set (PKGDATADIR "${DATADIR}/test")
+set (PKGDATADIR "${DATADIR}/test/")
 
 set (EXEC_NAME "vala_test")
 
